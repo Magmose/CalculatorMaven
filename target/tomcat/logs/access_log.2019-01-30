@@ -1,1 +1,2 @@
 127.0.0.1 - - [30/Jan/2019:16:05:07 +0100] "GET /CalculatorMaven/calculator?operation=add&n1=2&n2=3 HTTP/1.1" 200 19 http-bio-7777-exec-1 104
+127.0.0.1 - - [30/Jan/2019:16:08:52 +0100] "GET /CalculatorMaven/calculator?operation=add&n1=2&n2=3 HTTP/1.1" 200 19 http-bio-7777-exec-1 96
