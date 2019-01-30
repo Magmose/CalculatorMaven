@@ -52,14 +52,14 @@ public class WebCalculatorTest {
         assertEquals(expResult, result);
     }
 
-    @Test
-    public void testSetupFail() throws Exception {
-        HttpClient httpC = new HttpClient("http://localhost:7777/CalculatorMaven/calculator");
-        String params = "?operation=add&n1=2&n2=3";
-        HttpClient instance = httpC;
-        String expResult = "Result of: 2+3= 100";
-        String result = instance.makeHttpRequest(params);
-        assertEquals(expResult, result);
-    }
+//    @Test
+//    public void testSetupFail() throws Exception {
+//        HttpClient httpC = new HttpClient("http://localhost:7777/CalculatorMaven/calculator");
+//        String params = "?operation=add&n1=2&n2=3";
+//        HttpClient instance = httpC;
+//        String expResult = "Result of: 2+3= 100";
+//        String result = instance.makeHttpRequest(params);
+//        assertEquals(expResult, result);
+//    }
 
 }
