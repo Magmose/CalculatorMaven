@@ -19,22 +19,22 @@ import utils.HttpClient;
  * @author Magnus
  */
 public class WebCalculatorTest {
-    
+
     public WebCalculatorTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -52,5 +52,14 @@ public class WebCalculatorTest {
         assertEquals(expResult, result);
     }
 
+    @Test
+    public void testSetupFail() throws Exception {
+        HttpClient httpC = new HttpClient("http://localhost:7777/CalculatorMaven/calculator");
+        String params = "?operation=add&n1=2&n2=3";
+        HttpClient instance = httpC;
+        String expResult = "Result of: 2+3= 100";
+        String result = instance.makeHttpRequest(params);
+        assertEquals(expResult, result);
+    }
 
 }
