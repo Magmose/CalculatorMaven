@@ -23,28 +23,13 @@ public class WebCalculatorTest {
     public WebCalculatorTest() {
     }
 
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
+    HttpClient httpC = new HttpClient("http://localhost:7777/CalculatorMaven/calculator");
 
     /**
      * Test of makeHttpRequest method, of class HttpClient.
      */
     @Test
-    public void testMakeHttpRequest() throws Exception {
-        HttpClient httpC = new HttpClient("http://localhost:7777/CalculatorMaven/calculator");
+    public void testAddHttpRequest() throws Exception {
         String params = "?operation=add&n1=2&n2=3";
         HttpClient instance = httpC;
         String expResult = "Result of: 2+3= 5";
@@ -52,14 +37,29 @@ public class WebCalculatorTest {
         assertEquals(expResult, result);
     }
 
-//    @Test
-//    public void testSetupFail() throws Exception {
-//        HttpClient httpC = new HttpClient("http://localhost:7777/CalculatorMaven/calculator");
-//        String params = "?operation=add&n1=2&n2=3";
-//        HttpClient instance = httpC;
-//        String expResult = "Result of: 2+3= 100";
-//        String result = instance.makeHttpRequest(params);
-//        assertEquals(expResult, result);
-//    }
+    @Test
+    public void testSubHttpRequest() throws Exception {
+        String params = "?operation=sub&n1=8&n2=3";
+        HttpClient instance = httpC;
+        String expResult = "Result of: 8-3= 5";
+        String result = instance.makeHttpRequest(params);
+        assertEquals(expResult, result);
+    }
 
+    @Test
+    public void testMulHttpRequest() throws Exception {
+        String params = "?operation=mul&n1=2&n2=3";
+        HttpClient instance = httpC;
+        String expResult = "Result of: 2*3= 6";
+        String result = instance.makeHttpRequest(params);
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testDivHttpRequest() throws Exception {
+        String params = "?operation=div&n1=12&n2=2";
+        HttpClient instance = httpC;
+        String expResult = "Result of: 12/2= 6";
+        String result = instance.makeHttpRequest(params);
+        assertEquals(expResult, result);
+    }
 }

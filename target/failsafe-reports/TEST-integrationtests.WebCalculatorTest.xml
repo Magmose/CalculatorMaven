@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="integrationtests.WebCalculatorTest" time="0.512" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="integrationtests.WebCalculatorTest" time="0.626" errors="0" skipped="0">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -58,7 +58,7 @@
     <property name="common.loader" value="${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar"/>
     <property name="maven.home" value="C:\Users\Bruger\Desktop\apache-maven-3.6.0-bin\apache-maven-3.6.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher verify -Ptest tomcat7:deploy -Pdeployremote"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher verify -Ptest"/>
     <property name="java.class.path" value="C:/Users/Bruger/Desktop/apache-maven-3.6.0-bin/apache-maven-3.6.0/boot/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.vm.specification.version" value="1.8"/>
@@ -80,5 +80,8 @@
     <property name="tomcat.maven.http.port" value="7777"/>
     <property name="java.specification.version" value="1.8"/>
   </properties>
-  <testcase classname="integrationtests.WebCalculatorTest" name="testMakeHttpRequest" time="0.512"/>
+  <testcase classname="integrationtests.WebCalculatorTest" name="testSubHttpRequest" time="0.604"/>
+  <testcase classname="integrationtests.WebCalculatorTest" name="testMulHttpRequest" time="0.004"/>
+  <testcase classname="integrationtests.WebCalculatorTest" name="testDivHttpRequest" time="0.004"/>
+  <testcase classname="integrationtests.WebCalculatorTest" name="testAddHttpRequest" time="0.014"/>
 </testsuite>
